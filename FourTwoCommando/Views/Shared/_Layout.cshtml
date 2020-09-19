@@ -4,28 +4,24 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - FourTwoCommando</title>
-    <link rel="icon" href="~/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="~/css/site.css">
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bulma-0.9.0/css/bulma.css"/>
-    </environment>
-    <environment include="Production">
-        <link rel="stylesheet" href="~/lib/bulma-0.9.0/css/bulma.min.css"/>
-    </environment>
-    <link rel="stylesheet" href="~/css/custom.css">
+    <link rel="stylesheet" href="~/lib/bulma-0.9.0/bulma.css"/>
 </head>
 <body>
 <header>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Index" role="button">
-                <img src="img/logo.png" alt="FourTwoCommando"/>
+                <img src="~/img/logo.png" alt="FourTwoCommando"/>
             </a>
         </div>
         
         <div class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Index">ORBAT</a>
+                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Index">Deployment</a>
             </div>
             
             <div class="navbar-end">
@@ -35,11 +31,9 @@
         </div>
     </nav>
 </header>
-<div class="container">
-    <main role="main" class="pb-3">
+<main role="main" class="pb-3">
         @RenderBody()
-    </main>
-</div>
+</main>
 
 <footer class="border-top footer text-muted">
     <div class="container">
